@@ -1,4 +1,10 @@
 Blocmarks::Application.routes.draw do
+  get "user_bookmarks/index"
+  get "user_bookmarks/show"
+  get "bookmarks/index"
+  get "bookmarks/show"
+  get "topics/index"
+  get "topics/show"
   get "incoming/create"
   resources :names
 

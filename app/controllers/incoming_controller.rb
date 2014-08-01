@@ -15,13 +15,13 @@ class IncomingController < ApplicationController
       bookmark = Bookmark.find_or_create_by(url: params["stripped-text"])
       user_bookmark = UserBookmark.create(user: user, bookmark: bookmark)
 
-      # get an array of the desired topics from params['subject'] using regex to parse the text
-      # iterate over loop of deisred topics...
-        # find or create topic based on current desired topic in loop
-        # assign bookmark to that topic
-
-        
-    end    
+      hashtags = params[:subject].scan(/#\w+/)
+      hashtags.each do |hashtag|
+        hashtag.sub!('#','')
+        topic = Topic.find_or_create_by(name: hashtag)
+        topic_bookmark = TopicBookmark.create(topic: topic, bookmark: bookmark)
+      end
+    end
 
     HEAD 200
   end
