@@ -1,2 +1,11 @@
-<h1>Topics#show</h1>
-<p>Find me in app/views/topics/show.html.erb</p>
+<h1><%= @topic.name %></h1>
+
+<% @bookmarks.each do |bookmark| %>
+  <div class="media">
+    <div class="mdeia-body">
+      <h4 class="media-heading">
+        <%= link_to bookmark.url, bookmark.url
+      </h4>
+    </div>
+  </div>
+<% end %>
