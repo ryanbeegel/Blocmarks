@@ -10,8 +10,8 @@
     <div class="container">
       <ul class="nav nav-tabs">
         <li><%= link_to "Home", welcome_index_path %></li>
-        <li><%= link_to "Topics", topics_index_path %></li>
-        <li><%= link_to "My Bookmarks", user_bookmarks_index_path %></li>
+        <li><%= link_to "Topics", topics_path %></li>
+        <li><%= link_to "My Bookmarks", user_bookmarks_path %></li>
 
         <div class="pull-right user-info">
           <% if current_user %>

@@ -1,9 +1,9 @@
 class TopicsController < ApplicationController
   def index
-    @topics = Topic.all#.include(:bookmarks)
+    @topics = Topic.all
   end
 
   def show
-    @topic = Topic.find(params[:id]).include(:boomarks)
+    @topic = Topic.find(params[:id])
   end
 end
