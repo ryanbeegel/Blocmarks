@@ -11,12 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140728171221) do
+ActiveRecord::Schema.define(version: 20140806170853) do
 
   create_table "bookmarks", force: true do |t|
     t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "embedly_url"
   end
 
   create_table "topic_bookmarks", force: true do |t|

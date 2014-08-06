@@ -34,3 +34,5 @@ gem 'devise'
 gem 'figaro'
 
 gem 'omniauth-facebook'
+
+gem 'embedly'

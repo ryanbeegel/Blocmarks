@@ -1,7 +1,7 @@
 <div class="media">
   <div class="mdeia-body">
     <h4 class="media-heading">
-      <%= link_to bookmark.url, bookmark.url %>
+      <%= link_to(bookmark.embedly_url.blank? ? bookmark.url : image_tag(bookmark.embedly_url), bookmark.url) %>
     </h4>
   </div>
 </div>
