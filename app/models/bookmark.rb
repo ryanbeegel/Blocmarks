@@ -5,6 +5,8 @@ class Bookmark < ActiveRecord::Base
   has_many :topic_bookmarks
   has_many :topics, through: :topic_bookmarks
 
+  has_many :likes
+
   after_create :get_embedly_url
 
   private

@@ -17,5 +17,14 @@ body {
 }
 
 .media-heading img {
-  width: 250px;
+  width: 200px;
+}
+
+p.notice {
+  margin-top:8px;
+  text-align: center;
+}
+
+h1.head, p.links, p.info, p.img {
+  text-align: center;
 }
