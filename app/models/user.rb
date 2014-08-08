@@ -12,6 +12,10 @@ class User < ActiveRecord::Base
     favorites.where(bookmark_id: bookmark.id).first
   end
 
+  def role?(base_role)
+    role == base_role.to_s
+  end
+
   def self.from_omniauth(auth)
     where(auth.slice(:provider, :uid)).first_or_create do |user|
       user.skip_confirmation!
