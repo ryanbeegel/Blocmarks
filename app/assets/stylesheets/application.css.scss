@@ -23,8 +23,13 @@ body {
 p.notice {
   margin-top:8px;
   text-align: center;
+  background-color: #4383CC;
 }
 
 h1.head, p.links, p.info, p.img {
   text-align: center;
+}
+
+.favorite {
+  margin-top: 20px;
 }

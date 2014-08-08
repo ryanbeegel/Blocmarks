@@ -1,9 +1,11 @@
 Blocmarks::Application.routes.draw do
   
-  resources :topics
-  resources :bookmarks
   resources :user_bookmarks
   resources :topic_bookmarks
+  resources :topics
+  resources :bookmarks, only: [] do
+    resources :favorites, only: [:create, :destroy]
+  end
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   resources :users, only: [:update]

@@ -5,7 +5,7 @@ class Bookmark < ActiveRecord::Base
   has_many :topic_bookmarks
   has_many :topics, through: :topic_bookmarks
 
-  has_many :likes
+  has_many :favorites, dependent: :destroy
 
   after_create :get_embedly_url
 
